@@ -13,4 +13,8 @@ public class Animal {
 	public void walk() {
 		System.out.println("I am walking");
 	}
+	
+	public void say() {
+		System.out.println("Say Something!");
+	}
 }
