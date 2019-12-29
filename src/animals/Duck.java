@@ -3,18 +3,20 @@
  */
 package animals;
 
+import utils.Constant;
+
 /**
  * @author Windy
  *
  */
-public class Duck extends Animal{
-	
+public class Duck extends Animal {
+
 	@Override
 	public void say() {
-		System.out.println("Quack, quack");
+		System.out.println(Constant.DUCK_SAYS);
 	}
-	
+
 	public void swim() {
-		System.out.println("I am swimming");
+		System.out.println(Constant.DUCK_SWIMS);
 	}
 }

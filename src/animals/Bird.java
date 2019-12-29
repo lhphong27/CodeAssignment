@@ -3,17 +3,19 @@
  */
 package animals;
 
+import utils.Constant;
+
 /**
  * @author Windy
  *
  */
-public class Bird extends Animal{
-	
+public class Bird extends Animal {
+
 	public void fly() {
-		System.out.println("I am flying");
+		System.out.println(Constant.FLY);
 	}
-	
+
 	public void sing() {
-		System.out.println("I am singing");
+		System.out.println(Constant.SING);
 	}
 }
