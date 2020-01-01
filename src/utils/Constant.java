@@ -19,6 +19,12 @@ public final class Constant {
 	public static final String SING = "I am singing";
 	public static final String CHICKEN_SAYS = "Cluck, cluck";
 	public static final String DUCK_SAYS = "Quack, quack";
-	public static final String DUCK_SWIMS = "I am swimming";
+	public static final String SWIMS = "I am swimming";
 	public static final String ROOSTER_SAYS = "Cock-a-doodle-doo";
+	public static final String MAKE_JOKE = "I make joke";
+	public static final String EAT_OTHER_FISH = "I eat other fishes";
+	public static final String COLOUR_GREY = "grey";
+	public static final String COLOUR_ORANGE = "orange";
+	public static final String BODYTYPE_LARGE = "large";
+	public static final String BODYTYPE_SMALL = "small";
 }

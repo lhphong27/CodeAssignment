@@ -5,9 +5,12 @@ package main;
 
 import animals.Bird;
 import animals.Chicken;
+import animals.ClownFish;
 import animals.Duck;
+import animals.Fish;
 import animals.Parrot;
 import animals.Rooster;
+import animals.Shark;
 import utils.Constant;
 
 /**
@@ -55,5 +58,13 @@ public class Solution {
 		parrotWithRooster.setWord(Constant.PARROT_NEAR_ROOSTER);
 		parrotWithRooster.say();
 		System.out.println("=====================");
+		
+		Shark shark = new Shark();
+		System.out.println("Color: " + shark.getColor() + ", Body Type: " + shark.getBodyType());
+		shark.eatOtherFish();
+		
+		ClownFish clowFish = new ClownFish();
+		System.out.println("Color: " + clowFish.getColor() + ", Body Type: " + clowFish.getBodyType());
+		clowFish.makeJoke();
 	}
 }

@@ -12,7 +12,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import animals.Duck;
+import animals.ClownFish;
 import utils.Constant;
 import utils.Utils;
 
@@ -20,7 +20,7 @@ import utils.Utils;
  * @author Phong
  *
  */
-public class DuckTesting {
+public class ClownfishTesting {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
 	@Before
@@ -32,19 +32,18 @@ public class DuckTesting {
 	public void restoreStream() {
 		System.setOut(System.out);
 	}
-
 	@Test
-	public void testSay() {
-		Duck duck = new Duck();
-		duck.say();
-		assertEquals(Utils.constructExpectedValue(Constant.DUCK_SAYS), outContent.toString());
+	public void test() {
+		ClownFish clownFish = new ClownFish();
+		clownFish.makeJoke();
+		assertEquals(Utils.constructExpectedValue(Constant.MAKE_JOKE), outContent.toString());
 	}
 	
 	@Test
-	public void testSwim() {
-		Duck duck = new Duck();
-		duck.swim();
-		assertEquals(Utils.constructExpectedValue(Constant.SWIMS), outContent.toString());
+	public void testProperties() {
+		ClownFish clownFish = new ClownFish();
+		assertEquals(Constant.COLOUR_ORANGE, clownFish.getColor());
+		assertEquals(Constant.BODYTYPE_SMALL, clownFish.getBodyType());
 	}
 
 }

@@ -17,6 +17,6 @@ public class Duck extends Animal {
 	}
 
 	public void swim() {
-		System.out.println(Constant.DUCK_SWIMS);
+		System.out.println(Constant.SWIMS);
 	}
 }
