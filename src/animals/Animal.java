@@ -11,12 +11,12 @@ import utils.Constant;
  *
  */
 public class Animal {
-
-	public void walk() {
+	//not all animals can walk
+	static void walk() {
 		System.out.println(Constant.ANIMAL_WALKS);
 	}
 
-	public void say() {
+	static void say() {
 		System.out.println(Constant.ANIMAL_SAYS);
 	}
 }

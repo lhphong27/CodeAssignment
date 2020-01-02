@@ -34,6 +34,7 @@ public class ChickenTesting {
 		System.setOut(System.out);
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	public void test() {
 		Chicken chicken = new Chicken();

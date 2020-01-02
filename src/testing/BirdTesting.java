@@ -34,11 +34,7 @@ public class BirdTesting {
 	public void testBird() throws IOException {
 		Bird bird = new Bird();
 
-		bird.fly();
-		assertEquals(Utils.constructExpectedValue(Constant.FLY), outContent.toString());
-		outContent.reset();
-
-		bird.walk();
+		Bird.walk();
 		assertEquals(Utils.constructExpectedValue(Constant.ANIMAL_WALKS), outContent.toString());
 		outContent.reset();
 

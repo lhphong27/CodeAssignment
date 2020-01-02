@@ -33,22 +33,23 @@ public class ParrotTesting {
 		System.setOut(System.out);
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	public void test() {
 		Parrot parrot = new Parrot();
-		parrot.setWord(Constant.PARROT_WITH_DOGS);
+		parrot.setWord(Constant.SOUND_OF_DOG);
 		parrot.say();
-		assertEquals(Utils.constructExpectedValue(Constant.PARROT_WITH_DOGS), outContent.toString());
+		assertEquals(Utils.constructExpectedValue(Constant.SOUND_OF_DOG), outContent.toString());
 		outContent.reset();
 		
-		parrot.setWord(Constant.PARROT_WITH_CATS);
+		parrot.setWord(Constant.SOUND_OF_CAT);
 		parrot.say();
-		assertEquals(Utils.constructExpectedValue(Constant.PARROT_WITH_CATS), outContent.toString());
+		assertEquals(Utils.constructExpectedValue(Constant.SOUND_OF_CAT), outContent.toString());
 		outContent.reset();
 		
-		parrot.setWord(Constant.PARROT_NEAR_ROOSTER);
+		parrot.setWord(Constant.SOUND_OF_ROOSTER);
 		parrot.say();
-		assertEquals(Utils.constructExpectedValue(Constant.PARROT_NEAR_ROOSTER), outContent.toString());		
+		assertEquals(Utils.constructExpectedValue(Constant.SOUND_OF_ROOSTER), outContent.toString());		
 	}
 
 }

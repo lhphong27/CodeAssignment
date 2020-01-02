@@ -33,6 +33,7 @@ public class RoosterTesting {
 		System.setOut(System.out);
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	public void test() {
 		Rooster rooster = new Rooster();

@@ -3,13 +3,15 @@
  */
 package animals;
 
+import utils.Constant;
+
 /**
  * @author Phong
  *
  */
-public class Parrot extends Animal {
+public class Parrot extends Bird {
 
-	private String word;
+	private static String word;
 
 	/**
 	 * @return the word
@@ -25,8 +27,11 @@ public class Parrot extends Animal {
 		this.word = word;
 	}
 
-	@Override
-	public void say() {
+	public static void say() {
 		System.out.println(word);
+	}
+	
+	public static void fly() {
+		System.out.println(Constant.FLY);
 	}
 }

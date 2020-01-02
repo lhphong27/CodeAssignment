@@ -9,11 +9,14 @@ import utils.Constant;
  * @author Windy
  *
  */
-public class Duck extends Animal {
+public class Duck extends Bird {
 
-	@Override
-	public void say() {
+	public static void say() {
 		System.out.println(Constant.DUCK_SAYS);
+	}
+	
+	public static void fly() {
+		System.out.println(Constant.FLY);
 	}
 
 	public void swim() {

@@ -9,10 +9,9 @@ import utils.Constant;
  * @author Windy
  *
  */
-public class Chicken extends Animal {
+public class Chicken extends Bird {
 
-	@Override
-	public void say() {
+	public static void say() {
 		System.out.println(Constant.CHICKEN_SAYS);
 	}
 }

@@ -8,11 +8,13 @@ import static org.junit.Assert.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import javax.swing.SpringLayout.Constraints;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import animals.Duck;
+import animals.Cat;
 import utils.Constant;
 import utils.Utils;
 
@@ -20,7 +22,7 @@ import utils.Utils;
  * @author Phong
  *
  */
-public class DuckTesting {
+public class CatTesting {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
 	@Before
@@ -35,17 +37,14 @@ public class DuckTesting {
 
 	@SuppressWarnings("static-access")
 	@Test
-	public void testSay() {
-		Duck duck = new Duck();
-		duck.say();
-		assertEquals(Utils.constructExpectedValue(Constant.DUCK_SAYS), outContent.toString());
-	}
-	
-	@Test
-	public void testSwim() {
-		Duck duck = new Duck();
-		duck.swim();
-		assertEquals(Utils.constructExpectedValue(Constant.SWIMS), outContent.toString());
+	public void test() {
+		Cat cat = new Cat();
+		cat.say();
+		assertEquals(Utils.constructExpectedValue(Constant.SOUND_OF_CAT), outContent.toString());
+		outContent.reset();
+		cat.walk();
+		assertEquals(Utils.constructExpectedValue(Constant.ANIMAL_WALKS), outContent.toString());
+		
 	}
 
 }

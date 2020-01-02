@@ -16,7 +16,8 @@ import animals.Shark;
 @RunWith(Suite.class)
 @SuiteClasses({ AnimalTesting.class, BirdTesting.class, ChickenTesting.class, DuckTesting.class, 
 	ParrotTesting.class, RoosterTesting.class, SharkTesting.class, ClownfishTesting.class,
-	FishTesitng.class, DolphinTesting.class})
+	FishTesitng.class, DolphinTesting.class, CaterpilarTesting.class, ButterflyTesting.class,
+	CatTesting.class, DogTesting.class, FrogTesting.class})
 public class AllTests {
 
 }
