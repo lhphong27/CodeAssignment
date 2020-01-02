@@ -23,6 +23,7 @@ public class Parrot extends Bird {
 	/**
 	 * @param word the word to set
 	 */
+	@SuppressWarnings("static-access")
 	public void setWord(String word) {
 		this.word = word;
 	}

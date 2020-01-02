@@ -3,8 +3,12 @@
  */
 package utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
 
 
 /**
@@ -68,5 +72,28 @@ public class Utils {
 			}
 		}
 		return count;
+	}
+	
+	public String getMessageByLanguage(String messageKey) {
+		String result = "";
+		try {
+			//construct properties file name based on locale
+			StringBuilder propertiesFileName =  new StringBuilder("message_");
+			//fallback to default value
+			if("en_US".equals(Locale.getDefault().toString())) {
+				Locale locale = new Locale("en");
+				Locale.setDefault(locale);
+			}
+			propertiesFileName.append(Locale.getDefault().toString());
+			propertiesFileName.append(".properties");
+			InputStream input = getClass().getClassLoader().getResourceAsStream(propertiesFileName.toString());
+			Properties properties = new Properties();
+			properties.load(input);
+			result = properties.get(messageKey).toString();
+			
+		}catch(IOException ex) {
+			System.out.println("Error: " + ex);
+		}
+		return result;
 	}
 }

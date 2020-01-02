@@ -4,14 +4,11 @@
 package testing;
 
 import static org.junit.Assert.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import animals.Shark;
 import utils.Constant;
 import utils.Utils;

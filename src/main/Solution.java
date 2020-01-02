@@ -5,6 +5,7 @@ package main;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import animals.Bird;
 import animals.Butterfly;
@@ -29,53 +30,57 @@ import utils.Utils;
  */
 public class Solution {
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
+		
+		Locale locale = new Locale(Constant.LOCALE_VI);
+//		Locale locale = new Locale(Constant.LOCALE_EN);
+		Locale.setDefault(locale);
 
-//		Bird bird = new Bird();
-//		bird.walk();
-//		bird.fly();
-//		bird.sing();
-//		System.out.println("=====================");
-//
-//		Duck duck = new Duck();
-//		duck.walk();
-//		duck.say();
-//		duck.swim();
-//		System.out.println("=====================");
-//
-//		Chicken chicken = new Chicken();
-//		chicken.say();
-//		System.out.println("=====================");
-//
-//		Rooster rooster = new Rooster();
-//		rooster.walk();
-//		rooster.say();
-//		System.out.println("=====================");
-//
-//		Parrot parrotWithDogs = new Parrot();
-//		parrotWithDogs.setWord(Constant.PARROT_WITH_DOGS);
-//		parrotWithDogs.say();
-//		System.out.println("=====================");
-//
-//		// we can create some new instances of Parrot or change the position of this
-//		// parrot :)
-//		Parrot parootWithCats = new Parrot();
-//		parootWithCats.setWord(Constant.PARROT_WITH_CATS);
-//		parootWithCats.say();
-//		System.out.println("=====================");
-//
-//		Parrot parrotWithRooster = new Parrot();
-//		parrotWithRooster.setWord(Constant.PARROT_NEAR_ROOSTER);
-//		parrotWithRooster.say();
-//		System.out.println("=====================");
-//		
-//		Shark shark = new Shark();
-//		System.out.println("Color: " + shark.getColor() + ", Body Type: " + shark.getBodyType());
-//		shark.eatOtherFish();
-//		
-//		ClownFish clowFish = new ClownFish();
-//		System.out.println("Color: " + clowFish.getColor() + ", Body Type: " + clowFish.getBodyType());
-//		clowFish.makeJoke();
+		Bird bird = new Bird();
+		bird.walk();
+		bird.sing();
+		System.out.println("=====================");
+
+		Duck duck = new Duck();
+		duck.walk();
+		duck.say();
+		duck.swim();
+		System.out.println("=====================");
+
+		Chicken chicken = new Chicken();
+		chicken.say();
+		System.out.println("=====================");
+
+		Rooster rooster = new Rooster();
+		rooster.walk();
+		rooster.say();
+		System.out.println("=====================");
+
+		Parrot parrotWithDogs = new Parrot();
+		parrotWithDogs.setWord(Constant.SOUND_OF_DOG);
+		parrotWithDogs.say();
+		System.out.println("=====================");
+
+		// we can create some new instances of Parrot or change the position of this
+		// parrot :)
+		Parrot parootWithCats = new Parrot();
+		parootWithCats.setWord(Constant.SOUND_OF_CAT);
+		parootWithCats.say();
+		System.out.println("=====================");
+
+		Parrot parrotWithRooster = new Parrot();
+		parrotWithRooster.setWord(Constant.SOUND_OF_ROOSTER);
+		parrotWithRooster.say();
+		System.out.println("=====================");
+		
+		Shark shark = new Shark();
+		System.out.println("Shark, Color: " + shark.getColor() + ", Body Type: " + shark.getBodyType());
+		shark.eatOtherFish();
+		
+		ClownFish clowFish = new ClownFish();
+		System.out.println("Clownfish, Color: " + clowFish.getColor() + ", Body Type: " + clowFish.getBodyType());
+		clowFish.makeJoke();
 		
 		
 //		Object[] animals = new Object[13];//should be dynamic array
@@ -105,7 +110,7 @@ public class Solution {
 //		int numberOfAnimalThatCanSing = Utils.countAninmalByAbility(Constant.ABILITY_SING, animals);
 //		System.out.println("There is/are " + numberOfAnimalThatCanSing + " animal(s) that can " + Constant.ABILITY_SING);
 		
-		//it would be better if we use List, we can init the size dynamically
+//		it would be better if we use List, we can init the size dynamically
 		List<Object> animalList = new ArrayList<Object>();
 		animalList.add(new Bird());
 		animalList.add(new Duck());
@@ -137,5 +142,12 @@ public class Solution {
 		int numberOfAnimalThatCanSing = Utils.countAninmalByAbility(Constant.ABILITY_SING, animalList);
 		System.out.println("There is/are " + numberOfAnimalThatCanSing + " animal(s) that can " + Constant.ABILITY_SING);
 		System.out.println("====================================");
+		
+		Dog dog = new Dog();
+		dog.say();
+		
+		Parrot parrot = new Parrot();
+		parrot.setWord(Constant.CHICKEN_SAYS);
+
 	}
 }
