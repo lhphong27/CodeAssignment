@@ -21,6 +21,7 @@ import animals.Frog;
 import animals.Parrot;
 import animals.Rooster;
 import animals.Shark;
+import service.ServiceImpl;
 import utils.Constant;
 import utils.Utils;
 
@@ -148,6 +149,21 @@ public class Solution {
 		
 		Parrot parrot = new Parrot();
 		parrot.setWord(Constant.CHICKEN_SAYS);
+		
+		ServiceImpl sv = new ServiceImpl();
+		
+		// simulate the initialization of the data
+		sv.add(new Bird());
+		sv.add(new Shark());
+		sv.add(new ClownFish());
+		
+		
+		Object[] animals = sv.getAll();
+		for(Object animal : animals) {
+			System.out.println("Animal: " + animal.getClass());
+		}
 
 	}
+	
+	
 }

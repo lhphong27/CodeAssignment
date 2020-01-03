@@ -3,12 +3,15 @@
  */
 package animals;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import utils.Constant;
 
 /**
  * @author Phong
  *
  */
+@XmlRootElement
 public class Fish extends Animal {
 
 	private String color;
